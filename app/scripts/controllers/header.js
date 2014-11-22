@@ -8,12 +8,10 @@
  * Controller of the angularChimpApp
  */
 angular.module('angularChimpApp')
-  .controller('MainCtrl', function($scope, $firebase) {
+  .controller('HeaderCtrl', function($scope, $location) {
   
-  var ref = new Firebase('https://jobster.firebaseio.com/jobs');
-  
-  var sync = $firebase(ref);
-  
-  $scope.jobs = sync.$asArray();
+  $scope.isActive = function (viewLocation) { 
+        return viewLocation === $location.path();
+    };
   
 });

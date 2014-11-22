@@ -1,0 +1,21 @@
+<div ng-controller="AddCtrl">
+<form ng-submit="addJob(newJobTitle)">
+      <input type="text" ng-model="jobTitle" />
+      <textarea ng-model="jobCopy"></textarea>
+      <select ng-model="jobSalary">
+          <option>£20-30,000</option>
+          <option>£30-40,000</option>
+          <option>£50-60,000</option>
+          <option>£60-70,000</option>
+          <option>£70,000 +</option>
+      </select>
+    
+    <select ng-model="jobType">
+      <option>Full time</option>
+      <option>Contract</option>
+      <option>Part time</option>
+    </select>
+      
+      <button type="submit">add job</button>
+    </form>
+</div>
