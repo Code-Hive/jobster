@@ -1,0 +1,17 @@
+<div ng-controller="MainCtrl">
+	
+	<ul>
+      <li ng-repeat="job in jobs">
+        <!-- exit a job -->
+        <h1>{{job.title}}</h1>
+        <p>{{job.copy}}</p>
+      </li>
+    </ul>
+    <!-- push a new job into the array -->
+    <form ng-submit="addJob(newJobTitle)">
+      <input ng-model="jobTitle" />
+      <textarea ng-model="jobCopy"></textarea>
+      <button type="submit">add job</button>
+    </form>
+	
+</div>
